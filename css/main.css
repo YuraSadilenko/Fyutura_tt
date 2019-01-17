@@ -13,6 +13,37 @@ body {
   font-weight: normal;
   font-style: normal; }
 
+.carousel-radio {
+  display: none; }
+  .carousel-radio--1:checked ~ .comment-box--one {
+    display: block; }
+  .carousel-radio--1:checked ~ .carousel__labels .carousel__labels-item--first::after {
+    background: gray; }
+  .carousel-radio--2:checked ~ .comment-box--two {
+    display: block; }
+  .carousel-radio--2:checked ~ .carousel__labels .carousel__labels-item--second::after {
+    background: gray; }
+  .carousel-radio--3:checked ~ .comment-box--three {
+    display: block; }
+  .carousel-radio--3:checked ~ .carousel__labels .carousel__labels-item--third::after {
+    background: gray; }
+
+.carousel__labels {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; }
+  .carousel__labels-item::after {
+    content: "";
+    display: inline-block;
+    margin: 0 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 50%;
+    cursor: pointer; }
+
 .header {
   position: relative;
   background: url("../images/header_secondary.jpg") no-repeat;
@@ -183,5 +214,7 @@ body {
     justify-content: space-between; }
     .cars__info-box {
       flex-grow: 1;
-      border: 1px solid black;
-      height: 50px; }
+      width: 33.33%; }
+
+.comment-box {
+  display: none; }

@@ -7,11 +7,13 @@
     justify-content: space-between;
 
     &-box{
+      // display: none;
       flex-grow: 1;
-      border: 1px solid black;
-      height: 50px;
+      width: 33.33%;
     }
   }
+}
 
-
+.comment-box {
+  display: none;
 }
