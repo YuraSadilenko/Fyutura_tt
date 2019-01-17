@@ -1,0 +1,27 @@
+.header {
+  position: relative;
+  background: url('../images/header_secondary.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3rem 10rem;
+  z-index: 1;
+
+  &__wraper {
+    background-color: rgba($main-color, .8);
+    background: linear-gradient(to bottom, rgba(#000, .85) 0%, rgba($main-color, .85) 100%);
+    background-blend-mode: color-burn;
+    -o-background-blend-mode: color-burn;
+    -ms-background-blend-mode: color-burn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__upper {
+    display: flex;
+    
+  }
+}
