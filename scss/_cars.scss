@@ -1,0 +1,17 @@
+.cars {
+  background-color: $light-gray;
+  padding: 3rem 10rem;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    &-box{
+      flex-grow: 1;
+      border: 1px solid black;
+      height: 50px;
+    }
+  }
+
+
+}
