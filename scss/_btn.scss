@@ -1,0 +1,30 @@
+.btn {
+  position: relative;
+  display: block;
+  margin: auto;
+  background-color: $main-color;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  color: $white-color;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: .4rem;
+  border: 0;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &:after {
+    content: "&rarr;";
+    position: absolute;
+    display: block;
+
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 10px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

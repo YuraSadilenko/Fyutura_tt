@@ -1,0 +1,83 @@
+.nav {
+  &__btn {
+    position: relative;
+    background-color: transparent;
+    display: block;
+    width: 3rem;
+    height: 4.2rem;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover .nav-dash-left {
+      transform: rotate(90deg) translate(9px, -1px);
+      height: 3px;
+    }
+    &:hover .nav-dash-left::after {
+      height: 3px;
+      width: 1.2rem;
+      transform: rotate(-45deg) translate(12px, 8px);
+    }
+
+    &:hover .nav-dash-right {
+      transform: rotate(-45deg) translate(6px, 10px);
+      width: 1.2rem;
+      height: 3px;
+    }
+    &:hover .nav-dash-right::after {
+      display: none;
+    }
+  }
+
+  &-dash-left {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    background-color: $white-color;
+    margin-bottom: 1.2rem;
+    transition: all .2s;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: .65rem;
+      left: 0;
+      display: block;
+      width: 1.4rem;
+      height: 1px;
+      background-color: $white-color;
+    }
+  }
+
+  &-dash-right {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    background-color: $white-color;
+    transition: all .3s;
+
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: .65rem;
+      left: 0;
+      display: block;
+      width: 1.4rem;
+      height: 1px;
+      background-color: $white-color;
+    }
+  }
+}
+
