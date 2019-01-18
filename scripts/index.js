@@ -3,7 +3,7 @@ function openNavigation() {
   nav.style.display = 'block';
   nav.style.width = '100%';
   nav.classList.remove('closed');
-  nav.classList.add('active');
+  nav.classList.add('activeNav');
 }
 
 function closeNavigation() {
@@ -11,13 +11,17 @@ function closeNavigation() {
   nav.style.display = 'none';
   nav.style.width = '0';
   nav.classList.remove('active');
-  nav.classList.add('closed');
+  nav.classList.add('closeNav');
 }
 
 function openPopup() {
-  document.getElementById('popup').style.display = 'block';
+  var popup = document.getElementById('popup');
+  popup.style.display = 'block';
+  popup.classList.add('activePop');
+
 }
 
 function closePopup() {
-  document.getElementById('popup').style.display = 'none';
+  var popup = document.getElementById('popup');
+  popup.style.display = 'none';
 }

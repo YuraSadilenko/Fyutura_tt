@@ -241,7 +241,7 @@ body {
       top: 1rem;
       transform: rotate(-45deg) translate(-3px, 7px); }
 
-.active {
+.activeNav {
   animation: openNav .4s; }
 
 .closed {
@@ -310,17 +310,18 @@ body {
     background-color: rgba(187, 12, 45, 0.5);
     border-radius: 2px;
     transition: all .3s;
-    z-index: -1; }
+    z-index: -1;
+    box-shadow: 0.7rem 1rem 3rem 0.3rem rgba(187, 12, 45, 0.2); }
   .btn-cars:hover::after {
     height: 100%;
     background-color: rgba(187, 12, 45, 0.75);
     border-bottom: 1px solid #1b1e24;
     color: #000;
     transform: translateX(-50%) translateY(-1px);
-    box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.3); }
+    box-shadow: 0 0.6rem 1rem rgba(187, 12, 45, 0.3); }
   .btn-cars:active::after {
     transform: translateX(-50%) translateY(-1px);
-    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5); }
+    box-shadow: 0 0.3rem 0.5rem rgba(187, 12, 45, 0.5); }
   .btn-cars:focus {
     outline: none; }
 
@@ -532,3 +533,68 @@ body {
   height: 20rem;
   text-align: center;
   margin-bottom: 2rem; }
+
+.popup {
+  position: fixed;
+  display: none;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  background: linear-gradient(to left bottom, white 50%, #e7e7e7 100%);
+  border-radius: 10px;
+  text-align: center;
+  padding: 8rem 1rem 5rem;
+  margin: auto;
+  z-index: 2000;
+  font-size: 1.2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all .3s; }
+  .popup__content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem; }
+  .popup__esc {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer; }
+    .popup__esc-btn::after, .popup__esc-btn::before {
+      content: "";
+      display: inline-block;
+      width: 2.5rem;
+      height: 2px;
+      background-color: #000;
+      transition: all .3s; }
+    .popup__esc-btn {
+      background-color: transparent; }
+    .popup__esc-btn::after {
+      top: 1rem;
+      transform: rotate(-45deg) translate(5px, -1px); }
+    .popup__esc-btn::before {
+      top: 1rem;
+      transform: rotate(45deg) translate(9px, 4px); }
+    .popup__esc-btn:hover::after {
+      top: 1rem;
+      transform: rotate(45deg) translate(-1px, -6px); }
+    .popup__esc-btn:hover::before {
+      top: 1rem;
+      transform: rotate(-45deg) translate(-4px, 8px); }
+  .popup__cars {
+    width: 20%;
+    text-align: center; }
+
+.activePop {
+  visibility: visible;
+  transition: all .3s; }
+
+@keyframes openPop {
+  from {
+    width: 0; }
+  to {
+    width: 90%; } }

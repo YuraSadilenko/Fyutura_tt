@@ -58,7 +58,7 @@
     border-radius: 2px;
     transition: all .3s;
     z-index: -1;
-  
+    box-shadow: .7rem 1rem 3rem .3rem rgba($main-color, .2);
   }
 
   &:hover::after {
@@ -67,12 +67,12 @@
     border-bottom: 1px solid $dark-btn;
     color: #000;
     transform: translateX(-50%) translateY(-1px);
-    box-shadow: 0 .6rem 1rem rgba(0,0,0, .3);
+    box-shadow: 0 .6rem 1rem rgba($main-color, .3);
   }
 
   &:active::after {
     transform: translateX(-50%) translateY(-1px);
-    box-shadow: 0 .3rem .5rem rgba(0,0,0, .5);
+    box-shadow: 0 .3rem .5rem rgba($main-color, .5);
 
   }
 

@@ -1,0 +1,88 @@
+.popup {
+  position: fixed;
+  display: none;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  background: linear-gradient(to left bottom, rgba(rgb(255, 255, 255), 1) 50%, rgba(rgb(231, 231, 231), 1) 100%);
+  border-radius: 10px;
+  text-align: center;
+  padding: 8rem 1rem 5rem;
+  margin: auto;
+  z-index: 2000;
+  font-size: 1.2rem;
+  box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+  transition: all .3s;
+
+  &__content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+  }
+
+  &__esc {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &-btn::after,
+    &-btn::before {
+      content: "";
+      display: inline-block;
+      width: 2.5rem;
+      height: 2px;
+      background-color: #000;
+      transition: all .3s;
+
+    }
+    &-btn {
+      background-color: transparent;
+    }
+
+    &-btn::after {
+      top: 1rem;
+      transform: rotate(-45deg) translate(5px, -1px);
+    }
+
+    &-btn::before {
+      top: 1rem;
+      transform: rotate(45deg) translate(9px, 4px);
+    }
+
+    &-btn:hover::after {
+      top: 1rem;
+      transform: rotate(45deg) translate(-1px, -6px);
+    }
+    &-btn:hover::before {
+      top: 1rem;
+      transform: rotate(-45deg) translate(-4px, 8px);
+    }
+  }
+
+  &__cars {
+    width: 20%;
+    text-align: center;
+  }
+}
+
+.activePop {
+  visibility: visible;
+  transition: all .3s;
+
+}
+
+@keyframes openPop {
+  from {
+    width: 0;
+  }
+  to {
+    width: 90%;
+  }
+}

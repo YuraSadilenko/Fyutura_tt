@@ -188,14 +188,13 @@
   }
 }
 
-.active {
+.activeNav {
   animation: openNav .4s;
 }
 
 .closed {
   animation: closeNav .4s;
 }
-
 
 @keyframes openNav {
   from {
