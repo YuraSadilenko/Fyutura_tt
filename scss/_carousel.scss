@@ -1,40 +1,201 @@
-.carousel-radio {
+.carousel-radio-left {
   display: none;
 
   &--1 {
-    &:checked ~ .comment-box--one {
+    &:checked ~ .car-box--one-left {
       display: block;
     }
 
-    &:checked ~ .carousel__labels .carousel__labels-item--first::after {
-      background: gray;
+    &:checked ~ .carousel__labels-left .carousel__labels-item--first-left::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
     }
   }
 
   &--2 {
-    &:checked ~ .comment-box--two {
+    &:checked ~ .car-box--two-left {
       display: block;
     }
 
-    &:checked ~ .carousel__labels .carousel__labels-item--second::after {
-      background: gray;
+    &:checked ~ .carousel__labels-left .carousel__labels-item--second-left::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
     }
   }
 
   &--3 {
-    &:checked ~ .comment-box--three {
+    &:checked ~ .car-box--three-left {
       display: block;
     }
 
-    &:checked ~ .carousel__labels .carousel__labels-item--third::after {
-      background: gray;
+    &:checked ~ .carousel__labels-left .carousel__labels-item--third-left::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--4 {
+    &:checked ~ .car-box--four-left {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-left .carousel__labels-item--fourth-left::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--5 {
+    &:checked ~ .car-box--five-left {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-left .carousel__labels-item--fifth-left::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
     }
   }
 }
 
-.carousel__labels {
+.carousel-radio-middle {
+  display: none;
+  transition: all 1s;
+
+
+  &--1 {
+    &:checked ~ .car-box--one-middle {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-middle .carousel__labels-item--first-middle::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--2 {
+    &:checked ~ .car-box--two-middle {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-middle .carousel__labels-item--second-middle::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--3 {
+    &:checked ~ .car-box--three-middle {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-middle .carousel__labels-item--third-middle::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--4 {
+    &:checked ~ .car-box--four-middle {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-middle .carousel__labels-item--fourth-middle::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--5 {
+    &:checked ~ .car-box--five-middle {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-middle .carousel__labels-item--fifth-middle::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+}
+
+.carousel-radio-right {
+  display: none;
+
+  &--1 {
+    &:checked ~ .car-box--one-right {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-right .carousel__labels-item--first-right::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--2 {
+    &:checked ~ .car-box--two-right {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-right .carousel__labels-item--second-right::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--3 {
+    &:checked ~ .car-box--three-right {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-right .carousel__labels-item--third-right::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--4 {
+    &:checked ~ .car-box--four-right {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-right .carousel__labels-item--fourth-right::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+
+  &--5 {
+    &:checked ~ .car-box--five-right {
+      display: block;
+    }
+
+    &:checked ~ .carousel__labels-right .carousel__labels-item--fifth-right::after {
+      width: .8rem;
+      height: .8rem;
+      background: $main-color;
+    }
+  }
+}
+
+.carousel__labels-left {
   position: absolute;
-  bottom: 5rem;
+  width: 100%;
+  bottom: 55%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -50,10 +211,75 @@
   &-item::after {
     content: "";
     display: inline-block;
-    margin: 0 2rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 1px solid gray;
+    margin: 0 1rem;
+    width: .5rem;
+    height: .5rem;
+    background-color: rgba($main-color, .5);
+    border-radius: 50%;
+    cursor: pointer;
+
+    // @include respond(tab-land) {
+    //   width: 1.3rem;
+    //   height: 1.3rem;
+    // }
+  }
+}
+.carousel__labels-middle {
+  position: absolute;
+  width: 100%;
+  bottom: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  // @include respond(tab-land) {
+  //   bottom: 5rem;
+  // }
+
+  // @include respond(phone) {
+  //   bottom: 7rem;
+  // }
+
+  &-item::after {
+    content: "";
+    display: inline-block;
+    margin: 0 1rem;
+    width: .5rem;
+    height: .5rem;
+    background-color: rgba($main-color, .5);
+    border-radius: 50%;
+    cursor: pointer;
+
+    // @include respond(tab-land) {
+    //   width: 1.3rem;
+    //   height: 1.3rem;
+    // }
+  }
+}
+
+.carousel__labels-right {
+  position: absolute;
+  width: 100%;
+  bottom: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  // @include respond(tab-land) {
+  //   bottom: 5rem;
+  // }
+
+  // @include respond(phone) {
+  //   bottom: 7rem;
+  // }
+
+  &-item::after {
+    content: "";
+    display: inline-block;
+    margin: 0 1rem;
+    width: .5rem;
+    height: .5rem;
+    background-color: rgba($main-color, .5);
     border-radius: 50%;
     cursor: pointer;
 

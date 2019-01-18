@@ -1,4 +1,5 @@
 html {
+  box-sizing: border-box;
   font-size: 10px; //1rem = 10px
   font-family: "GothamPro", Arial, Sans-serif;
 }
@@ -6,5 +7,4 @@ html {
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
