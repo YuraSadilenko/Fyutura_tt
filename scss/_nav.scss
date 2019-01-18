@@ -102,7 +102,9 @@
     @include respond(tab-land) {
       width: 35%;
     }
-
+    @include respond(phone) {
+      width: 75%;
+    }
   }
 
   &__list {

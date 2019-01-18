@@ -1,3 +1,4 @@
+//header btn
 .btn {
   position: relative;
   display: block;
@@ -35,6 +36,7 @@
   }
 }
 
+//second btn for modal and section cars
 .btn-cars {
   position: relative;
   display: inline-block;
@@ -49,6 +51,10 @@
   letter-spacing: .4rem;
   cursor: pointer;
   z-index: 1;
+
+  &--margin-down {
+    margin-bottom: 4rem; 
+  }
 
   &::after {
     content: "";
@@ -78,7 +84,6 @@
   &:active::after {
     transform: translateX(-50%) translateY(-1px);
     box-shadow: 0 .3rem .5rem rgba($main-color, .5);
-
   }
 
   &:focus {

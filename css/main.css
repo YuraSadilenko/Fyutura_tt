@@ -5,6 +5,9 @@ html {
   @media (max-width: 74.8rem) {
     html {
       font-size: 8px; } }
+  @media (min-width: 112.5rem) {
+    html {
+      font-size: 16px; } }
 
 body {
   margin: 0;
@@ -43,6 +46,9 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10rem; }
+    @media (max-width: 40.5rem) {
+      .header__upper {
+        justify-content: space-around; } }
   .header__heading {
     margin-bottom: 8rem;
     padding: 0 2rem; }
@@ -57,12 +63,15 @@ body {
       letter-spacing: .35rem;
       font-weight: 100;
       line-height: 1.5; }
-    @media (max-width: 74.8rem) {
-      .header__heading {
-        font-size: 3rem; } }
-    @media (max-width: 74.8rem) {
-      .header__heading {
-        font-size: 2.6rem; } }
+      @media (max-width: 74.8rem) {
+        .header__heading-item {
+          font-size: 3rem; } }
+      @media (max-width: 60rem) {
+        .header__heading-item {
+          font-size: 2.2rem; } }
+      @media (max-width: 40.5rem) {
+        .header__heading-item {
+          font-size: 1.8rem; } }
 
 .upper__navigation {
   width: 33.33%; }
@@ -79,6 +88,9 @@ body {
   display: flex;
   flex-direction: column;
   width: 33.33%; }
+  @media (max-width: 40.5rem) {
+    .upper__number-box {
+      display: none; } }
 
 .upper__number {
   margin-bottom: 0.5rem;
@@ -188,6 +200,10 @@ body {
       .navigation__bar,
       #navigation__bar {
         width: 35%; } }
+    @media (max-width: 40.5rem) {
+      .navigation__bar,
+      #navigation__bar {
+        width: 75%; } }
   .navigation__list,
   #navigation__list {
     list-style: none;
@@ -338,6 +354,8 @@ body {
   letter-spacing: .4rem;
   cursor: pointer;
   z-index: 1; }
+  .btn-cars--margin-down {
+    margin-bottom: 4rem; }
   .btn-cars::after {
     content: "";
     display: inline-block;
@@ -475,6 +493,9 @@ body {
   @media (max-width: 60rem) {
     .carousel__labels-left {
       bottom: 62%; } }
+  @media (max-width: 40.5rem) {
+    .carousel__labels-left {
+      bottom: 50%; } }
   .carousel__labels-left-item::after {
     content: "";
     display: inline-block;
@@ -495,6 +516,9 @@ body {
   @media (max-width: 60rem) {
     .carousel__labels-middle {
       bottom: 62%; } }
+  @media (max-width: 40.5rem) {
+    .carousel__labels-middle {
+      bottom: 50%; } }
   .carousel__labels-middle-item::after {
     content: "";
     display: inline-block;
@@ -515,6 +539,9 @@ body {
   @media (max-width: 60rem) {
     .carousel__labels-right {
       bottom: 62%; } }
+  @media (max-width: 40.5rem) {
+    .carousel__labels-right {
+      bottom: 50%; } }
   .carousel__labels-right-item::after {
     content: "";
     display: inline-block;
@@ -532,6 +559,9 @@ body {
   @media (max-width: 74.8rem) {
     .section-cars {
       padding: 5rem 5rem; } }
+  @media (max-width: 40.5rem) {
+    .section-cars {
+      padding: 5rem 0; } }
 
 .cars {
   display: flex;
@@ -539,7 +569,8 @@ body {
   margin-bottom: 3rem; }
   @media (max-width: 40.5rem) {
     .cars {
-      flex-direction: column; } }
+      flex-direction: column;
+      align-items: center; } }
   .cars__info-box {
     position: relative;
     max-width: 30%;
@@ -596,6 +627,9 @@ body {
   height: 20rem;
   text-align: center;
   margin-bottom: 2rem; }
+  @media (max-width: 40.5rem) {
+    .car-block {
+      height: 28rem; } }
 
 .popup {
   position: fixed;
@@ -613,6 +647,9 @@ body {
   font-size: 1.2rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transition: all .3s; }
+  @media (max-width: 40.5rem) {
+    .popup {
+      padding: 5rem .1rem 2rem; } }
   .popup__content {
     position: relative;
     display: flex;
@@ -621,6 +658,9 @@ body {
     @media (max-width: 60rem) {
       .popup__content {
         justify-content: center; } }
+    @media (max-width: 40.5rem) {
+      .popup__content {
+        justify-content: space-around; } }
   .popup__esc {
     position: absolute;
     top: 2rem;
@@ -665,8 +705,14 @@ body {
   .popup__cars {
     width: 30%;
     text-align: center; }
+    @media (max-width: 40.5rem) {
+      .popup__cars:nth-child(2) {
+        display: none; } }
   .popup__car-block {
     height: 18rem; }
     @media (max-width: 60rem) {
       .popup__car-block {
         height: 11rem; } }
+    @media (max-width: 40.5rem) {
+      .popup__car-block {
+        height: 9rem; } }

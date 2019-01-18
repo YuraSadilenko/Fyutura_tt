@@ -203,6 +203,9 @@
   @include respond(tab-port) {
   bottom: 62%;
   }
+  @include respond(phone) {
+    bottom: 50%;
+  }
 
   &-item::after {
     content: "";
@@ -215,6 +218,7 @@
     cursor: pointer;
   }
 }
+
 .carousel__labels-middle {
   position: absolute;
   width: 100%;
@@ -225,7 +229,10 @@
 
   @include respond(tab-port) {
     bottom: 62%;
-    }
+  }
+  @include respond(phone) {
+    bottom: 50%;
+  }
 
   &-item::after {
     content: "";
@@ -249,7 +256,10 @@
 
   @include respond(tab-port) {
     bottom: 62%;
-    }
+  }
+  @include respond(phone) {
+    bottom: 50%;
+  }
 
   &-item::after {
     content: "";

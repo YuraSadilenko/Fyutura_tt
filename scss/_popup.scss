@@ -15,6 +15,11 @@
   box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
   transition: all .3s;
 
+  @include respond(phone) {
+    padding: 5rem .1rem 2rem;
+  }
+
+
   &__content {
     position: relative;
     display: flex;
@@ -24,6 +29,10 @@
     @include respond(tab-port) {
       justify-content: center;
     }
+    @include respond(phone) {
+      justify-content: space-around;
+    }
+
     
   }
 
@@ -86,12 +95,23 @@
   &__cars {
     width: 30%;
     text-align: center;
+    
+    @include respond(phone) {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
   }
+
   &__car-block {
     height: 18rem;
     @include respond(tab-port) {
       height: 11rem;
     }
+    @include respond(phone) {
+      height: 9rem;
+    }
+
 
   }
 }

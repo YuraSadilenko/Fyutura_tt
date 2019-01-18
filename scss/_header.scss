@@ -13,8 +13,6 @@
     padding: 3rem 2rem 10rem;
   }
 
-
-
   &__wraper {
     background-color: rgba($wrap-color, .8);
     background: linear-gradient(to bottom, rgba(#000, .85) 10%, rgba($wrap-color, .8) 100%);
@@ -31,6 +29,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10rem;
+
+    @include respond(phone) {
+      justify-content: space-around;
+    }
+
   }
 
   &__heading {
@@ -41,7 +44,6 @@
       padding: 0;
     }
 
-
     &-item {
       text-transform: uppercase;
       color: $white-color; 
@@ -50,16 +52,17 @@
       letter-spacing: .35rem;
       font-weight: 100;
       line-height: 1.5;
-    }
 
-    @include respond(tab-land) {
-      font-size: 3rem;
+      @include respond(tab-land) {
+        font-size: 3rem;
+      }
+      @include respond(tab-port) {
+        font-size: 2.2rem;
+      }
+      @include respond(phone) {
+        font-size: 1.8rem;
+      }
     }
-    @include respond(tab-land) {
-      font-size: 2.6rem;
-    }
-
-  
   }
 }
 
@@ -81,6 +84,10 @@
     display: flex;
     flex-direction: column;
     width: 33.33%;
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__number {
