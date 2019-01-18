@@ -647,6 +647,9 @@ body {
   font-size: 1.2rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   transition: all .3s; }
+  @media (max-width: 60rem) {
+    .popup {
+      padding: 5rem .1rem 2rem; } }
   @media (max-width: 40.5rem) {
     .popup {
       padding: 5rem .1rem 2rem; } }
@@ -660,7 +663,8 @@ body {
         justify-content: center; } }
     @media (max-width: 40.5rem) {
       .popup__content {
-        justify-content: space-around; } }
+        justify-content: space-around;
+        margin-bottom: 0; } }
   .popup__esc {
     position: absolute;
     top: 2rem;
@@ -705,6 +709,9 @@ body {
   .popup__cars {
     width: 30%;
     text-align: center; }
+    @media (max-width: 40.5rem) {
+      .popup__cars {
+        margin-bottom: 0; } }
     @media (max-width: 40.5rem) {
       .popup__cars:nth-child(2) {
         display: none; } }
