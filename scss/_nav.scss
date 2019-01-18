@@ -81,14 +81,18 @@
   }
 }
 
-.navigation {
+.navigation,
+#navigation {
+  display: none;
   position: fixed;
   background-color: rgba(0,0,0, .5);
-  width: 100%;
+  width: 0;
   height: 100vh;
   z-index: 1000;
+  transition: all 1s;
 
   &__bar {
+    position: relative;
     width: 25%;
     height: 100%;
     background-color: $light-gray;
@@ -97,22 +101,37 @@
 
   &__list {
     list-style: none;
+    padding: 0;
   }
 
   &__item {
+    position: relative;
     display: block;
     padding: 1rem 2rem;
     color: $dark-btn;
     font-size: 1.6rem;
     text-decoration: none;
     text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.1) translateX(10px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      display: block;
+      width: 0;
+      height: 1px;
+      background-color: $wrap-color;
+      transition: all .3s;
+    }
 
     &:hover::after {
-      content: "";
-      display: block;
       width: 100%;
-      height: 2px;
-      background-color: $wrap-color;
     }
 
     &:focus {
@@ -123,5 +142,80 @@
   &__nav {
     margin-bottom: 4rem;
   }
+
+  &__esc {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &-btn::after,
+    &-btn::before {
+      content: "";
+      display: inline-block;
+      width: 2.5rem;
+      height: 2px;
+      background-color: #000;
+      transition: all .3s;
+
+    }
+    &-btn {
+      background-color: transparent;
+    }
+
+    &-btn::after {
+      top: 1rem;
+      transform: rotate(-45deg) translate(5px, -2px);
+    }
+
+    &-btn::before {
+      top: 1rem;
+      transform: rotate(45deg) translate(7px, 3px);
+    }
+
+    &-btn:hover::after {
+      top: 1rem;
+      transform: rotate(45deg) translate(-1px, -6px);
+    }
+    &-btn:hover::before {
+      top: 1rem;
+      transform: rotate(-45deg) translate(-3px, 7px);
+    }
+
+  }
 }
+
+.active {
+  animation: openNav .4s;
+}
+
+.closed {
+  animation: closeNav .4s;
+}
+
+
+@keyframes openNav {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes closeNav {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+
 
