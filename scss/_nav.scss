@@ -1,3 +1,4 @@
+//menu
 .nav {
   &__btn {
     position: relative;
@@ -97,6 +98,11 @@
     height: 100%;
     background-color: $light-gray;
     padding: 8rem 1rem 0;
+    
+    @include respond(tab-land) {
+      width: 35%;
+    }
+
   }
 
   &__list {
@@ -114,12 +120,9 @@
     text-transform: uppercase;
     transition: all .3s;
 
-    &:hover {
-      transform: scale(1.1) translateX(10px);
-    }
-
     &::after {
       content: "";
+      display: inline-block;
       position: absolute;
       bottom: 2rem;
       left: 0;
@@ -150,6 +153,7 @@
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
+    overflow: hidden;
     cursor: pointer;
     
     &-btn::after,
@@ -169,31 +173,45 @@
     &-btn::after {
       top: 1rem;
       transform: rotate(-45deg) translate(5px, -2px);
+      @include respond(tab-land) {
+        transform: rotate(-45deg) translate(3px, -3px);
+      }
     }
 
     &-btn::before {
       top: 1rem;
       transform: rotate(45deg) translate(7px, 3px);
+      @include respond(tab-land) {
+        transform: rotate(45deg) translate(3px, 3px);
+      }
     }
 
     &-btn:hover::after {
       top: 1rem;
       transform: rotate(45deg) translate(-1px, -6px);
+      @include respond(tab-land) {
+        transform: rotate(45deg) translate(-3px, -3px);
+      }
     }
+
     &-btn:hover::before {
       top: 1rem;
       transform: rotate(-45deg) translate(-3px, 7px);
+      @include respond(tab-land) {
+        transform: rotate(-45deg) translate(-3px, 3px);
+      }
     }
-
+    @include respond(tab-land) {
+    }
   }
 }
 
 .activeNav {
-  animation: openNav .4s;
+  animation: openNav .2s;
 }
 
-.closed {
-  animation: closeNav .4s;
+.closeNav {
+  animation: closeNav .2s;
 }
 
 @keyframes openNav {

@@ -6,13 +6,18 @@
   padding: 2rem 3rem;
   text-transform: uppercase;
   color: $white-color;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: .4rem;
   border: 0;
   border-radius: 2px;
   cursor: pointer;
   transition: all .4s;
+
+  @include respond(tab-port) {
+  font-size: 1.4rem;
+  }
+
 
   &:hover {
     transform: translateY(-3px) scale(1.02);

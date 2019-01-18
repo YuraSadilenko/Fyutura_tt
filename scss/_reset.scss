@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
   font-size: 10px; //1rem = 10px
   font-family: "GothamPro", Arial, Sans-serif;
+
+  @include respond(tab-land) {
+    font-size: 8px;
+  }
 }
 
 body {

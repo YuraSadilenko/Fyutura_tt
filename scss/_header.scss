@@ -6,6 +6,15 @@
   padding: 3rem 10rem 15rem;
   z-index: 1;
 
+  @include respond(tab-land) {
+    padding: 3rem 5rem 13rem;
+  }
+  @include respond(tab-port) {
+    padding: 3rem 2rem 10rem;
+  }
+
+
+
   &__wraper {
     background-color: rgba($wrap-color, .8);
     background: linear-gradient(to bottom, rgba(#000, .85) 10%, rgba($wrap-color, .8) 100%);
@@ -28,6 +37,11 @@
     margin-bottom: 8rem;
     padding: 0 2rem;
 
+    @include respond(tab-land) {
+      padding: 0;
+    }
+
+
     &-item {
       text-transform: uppercase;
       color: $white-color; 
@@ -37,6 +51,15 @@
       font-weight: 100;
       line-height: 1.5;
     }
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+    @include respond(tab-land) {
+      font-size: 2.6rem;
+    }
+
+  
   }
 }
 
